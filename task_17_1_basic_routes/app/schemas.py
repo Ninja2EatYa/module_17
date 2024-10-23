@@ -7,17 +7,8 @@ class UpdateUser(BaseModel):
     age: int
 
 
-class CreateUser(BaseModel):
+class CreateUser(UpdateUser):
     username: str
-    firstname: str
-    lastname: str
-    age: int
-
-
-class UpdateUser(CreateUser):
-    firstname: str
-    lastname: str
-    age: int
 
 
 class CreateTask(BaseModel):
@@ -26,5 +17,5 @@ class CreateTask(BaseModel):
     priority: int
 
 
-class UpdateTask(BaseModel, CreateTask):
+class UpdateTask(CreateTask):
     pass
